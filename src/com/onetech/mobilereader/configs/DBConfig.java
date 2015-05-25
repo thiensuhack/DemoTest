@@ -14,7 +14,14 @@ public class DBConfig {
 		public static final String COMMON_TABLE= "Common";
 		public static final int COMMON_TABLE_SIZE = 100;
 		
+		public static final String USER_BOOK_DETAIL_TABLE= "UserBookDetail";
+		public static final int USER_BOOK_DETAIL_TABLE_SIZE = 1000;
+		
+		// Category
 		public static final String LIST_CATEGORY_CACHE_KEY = "categorycachekey";
+		
+		// User 
+		public static final String USER_INFO_CACHE_KEY = "userinfocachekey";
 	}
 	
 }

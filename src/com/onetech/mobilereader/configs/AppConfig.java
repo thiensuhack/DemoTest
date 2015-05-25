@@ -8,5 +8,6 @@ public class AppConfig {
 	public static final class UrlRequest {
 		public static final String domain = "";
 		public static final String GET_ALL_CATEGORY = domain + "";
+		public static final String GET_USER_INFO = domain + "";
 	}
 }

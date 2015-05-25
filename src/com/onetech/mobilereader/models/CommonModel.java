@@ -11,11 +11,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.onetech.mobilereader.OTApplicationContext;
 import com.onetech.mobilereader.configs.AppConfig.UrlRequest;
 import com.onetech.mobilereader.configs.DBConfig.Cache;
 import com.onetech.mobilereader.entity.CategoryEntity;
+import com.onetech.mobilereader.entity.UserEntity;
 import com.onetech.mobilereader.http.OTHttpRequest;
 import com.onetech.mobilereader.http.ResultHttp;
 import com.onetech.mobilereader.interfaces.CommonIF;
@@ -29,6 +31,7 @@ public class CommonModel extends BaseModel implements CommonIF {
 	private static final Lock createLock = new ReentrantLock();
 
 	private static final int STORE_EXPIRE = 3 * 24 * 60 * 60; // 3 day
+	
 
 	public static CommonIF getInstance() {
 		if (_instance == null) {
@@ -58,7 +61,7 @@ public class CommonModel extends BaseModel implements CommonIF {
 	void setStore(String key, String value, int expiredTime) {
 		this.getStoreAdapter().put(key, value, expiredTime);
 	}
-
+	// Category store utils
 	@Override
 	public List<CategoryEntity> getAllCategory() {
 		List<CategoryEntity> result = new ArrayList<CategoryEntity>();
@@ -67,9 +70,9 @@ public class CommonModel extends BaseModel implements CommonIF {
 		if (cateString != null && cateString.length() > 0) {
 			result = convertJsonStringToListCategory(cateString);
 		} else {
-
+			result = getAllCategoryFromServer();
 		}
-		return null;
+		return result;
 	}
 
 	private List<CategoryEntity> getAllCategoryFromServer() {
@@ -95,7 +98,7 @@ public class CommonModel extends BaseModel implements CommonIF {
 					}
 				}
 			}
-		} catch (Exception e) {
+		} catch (JSONException e) {
 		}
 		return result;
 	}
@@ -125,4 +128,56 @@ public class CommonModel extends BaseModel implements CommonIF {
 		result = gs.fromJson(json, typeClass);
 		return result;
 	}
+	// End category store utils
+
+	// User store utils
+	@Override
+	public UserEntity getUserInfo(long id) {
+		UserEntity result = null;
+		String userString = this.getStoreAdapter().get(Cache.USER_INFO_CACHE_KEY);
+		if(userString!=null && userString.length()>0){
+			result = convertJsonStringToUser(userString);
+		}else{
+			try {
+				String data = OTHttpRequest.getInstance().getStringFromServer(
+						UrlRequest.GET_USER_INFO, null);
+				if (data != null && data.length() > 0) {
+					ResultHttp resultHttp = CommonUtils.getResultRequest(data);
+					if (resultHttp != null && resultHttp.error_code == 0) {
+						JSONObject jb = (JSONObject) resultHttp.data;
+						result = convertJSONObjectToUser(jb);
+					}
+				}
+			} catch (Exception e) {
+			}
+		}
+		return result;
+	}
+	private UserEntity convertJsonStringToUser(String json){
+		UserEntity result = null;
+		try {
+			result = new UserEntity();
+			Gson gson = new Gson();
+			Type typeClass = new TypeToken<UserEntity>(){}.getType();
+			result = gson.fromJson(json, typeClass);
+		} catch (JsonSyntaxException e) {
+		}
+		return result;
+	}
+	private UserEntity convertJSONObjectToUser(JSONObject jb){
+		UserEntity result = null;
+		try {
+			result = new UserEntity();
+			result.setId(jb.getLong("id"));
+			result.setAlias(jb.getString("alias"));
+			result.setName(jb.getString("name"));
+			result.setBirthday(jb.optString("birthday",""));
+			result.setDateCreated(jb.optString("dateCreated",""));
+			result.setDeviceId(jb.optString("deviceId",""));
+			result.setBlocked(jb.optBoolean("isBlocked",false));
+		} catch (JSONException e) {
+		}
+		return result;
+	}
+	// End user store utils
 }

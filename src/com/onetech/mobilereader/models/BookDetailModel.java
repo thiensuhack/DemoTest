@@ -28,7 +28,18 @@ public class BookDetailModel extends BaseModel implements BookDetailIF {
 	private static BookDetailIF _instance;
 	private static final Lock createLock = new ReentrantLock();
 	private static final int STORE_EXPIRE = 3 * 24 * 60 * 60; // 3days
-
+	
+	public static BookDetailIF getInstance(){
+		if(_instance == null){
+			createLock.lock();
+			_instance = new BookDetailModel();
+			createLock.unlock();
+		}
+		return _instance;
+	}
+	private BookDetailModel(){
+		
+	}
 	@Override
 	SimpleStoreIF getStoreAdapter() {
 		return StoreUtils.getStoreAdapter(Cache.BOOK_DETAIL_TABLE,
@@ -79,8 +90,9 @@ public class BookDetailModel extends BaseModel implements BookDetailIF {
 			ids_miss = ids;
 		}
 		if(ids_miss!=null && ids_miss.size()>0){
-			List<BookEntity> listBook=getListBookDetailFromIds(requestUrl, ids_miss);
+			List<BookEntity> listBook=getListBookDetailFromServer(requestUrl, ids_miss);
 			if(listBook!=null && listBook.size()>0){
+				result.clear();
 				result.addAll(listBook);
 			}
 		}else{
@@ -91,9 +103,32 @@ public class BookDetailModel extends BaseModel implements BookDetailIF {
 
 	@Override
 	public BookEntity getBookDetail(String requestUrl, long id) {
-		return null;
+		BookEntity result = null;
+		String resultString = this.getStoreAdapter().get(String.valueOf(id));
+		if(resultString != null && resultString.length()>0){
+			result = convertJsonStringToBookDetail(resultString);
+		}
+		if(result == null){
+			result = getBookDetailFromServer(requestUrl, id);
+		}
+		return result;
 	}
-	private List<BookEntity> getListBookDetailFromIds(String requestUrl,List<Long> ids){
+	private BookEntity getBookDetailFromServer(String requestUrl, long id){
+		BookEntity result = null;
+		try {
+			String data = OTHttpRequest.getInstance().getStringFromServer(requestUrl, null);
+			if(data!=null && data.length()>0){
+				ResultHttp resultHttp = CommonUtils.getResultRequest(data);
+				if(resultHttp!=null && resultHttp.error_code==0){
+					JSONObject jb = (JSONObject) resultHttp.data;
+					result = convertJsonObjectToBookDetail(jb);
+				}
+			}
+		} catch (Exception e) {
+		}
+		return result;
+	}
+	private List<BookEntity> getListBookDetailFromServer(String requestUrl,List<Long> ids){
 		List<BookEntity> result = null;
 		try {
 			String data = OTHttpRequest.getInstance().getStringFromServer(requestUrl, null);
@@ -109,6 +144,7 @@ public class BookDetailModel extends BaseModel implements BookDetailIF {
 							JSONObject jb = jArr.getJSONObject(i);
 							tmp=convertJsonObjectToBookDetail(jb);
 							if(tmp!=null){
+								this.storeBookDetail(tmp);
 								result.add(tmp);
 							}
 						}
@@ -134,7 +170,7 @@ public class BookDetailModel extends BaseModel implements BookDetailIF {
 		}
 		return result;
 	}
-	public BookEntity convertJsonStringToBookDetail(String json) {
+	private BookEntity convertJsonStringToBookDetail(String json) {
 		if (json == null || json.equals("")) {
 			return null;
 		}
@@ -144,5 +180,10 @@ public class BookDetailModel extends BaseModel implements BookDetailIF {
 		}.getType();
 		result = (BookEntity) gson.fromJson(json, typeClass);
 		return result;
+	}
+	private void storeBookDetail(BookEntity book){
+		Gson gson = new Gson();
+		String data = gson.toJson(book);
+		this.getStoreAdapter().put(String.valueOf(book.getId()), data);
 	}
 }
