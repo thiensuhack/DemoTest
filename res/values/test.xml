@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="title_tab_item">
+	    <item>Hot Product</item>
+	    <item>New Product</item>
+	    <item>Product 3</item>
+		<item>Product 4</item>
+	</string-array>
+</resources>
