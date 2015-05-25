@@ -1449,19 +1449,19 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f0b0003;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f060036;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f060037;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f060037;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f060038;
         public static final int abc_input_method_navigation_guard=0x7f060008;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f060038;
-        public static final int abc_primary_text_disable_only_material_light=0x7f060039;
-        public static final int abc_primary_text_material_dark=0x7f06003a;
-        public static final int abc_primary_text_material_light=0x7f06003b;
-        public static final int abc_search_url_text=0x7f06003c;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f060039;
+        public static final int abc_primary_text_disable_only_material_light=0x7f06003a;
+        public static final int abc_primary_text_material_dark=0x7f06003b;
+        public static final int abc_primary_text_material_light=0x7f06003c;
+        public static final int abc_search_url_text=0x7f06003d;
         public static final int abc_search_url_text_normal=0x7f060005;
         public static final int abc_search_url_text_pressed=0x7f060007;
         public static final int abc_search_url_text_selected=0x7f060006;
-        public static final int abc_secondary_text_material_dark=0x7f06003d;
-        public static final int abc_secondary_text_material_light=0x7f06003e;
+        public static final int abc_secondary_text_material_dark=0x7f06003e;
+        public static final int abc_secondary_text_material_light=0x7f06003f;
         public static final int accent_material_dark=0x7f060014;
         public static final int accent_material_light=0x7f060013;
         public static final int background_floating_material_dark=0x7f06000b;
@@ -1498,6 +1498,7 @@ containing a value of this type.
         public static final int hint_foreground_material_light=0x7f060024;
         public static final int link_text_material_dark=0x7f060027;
         public static final int link_text_material_light=0x7f060028;
+        public static final int main_color=0x7f060036;
         public static final int material_blue_grey_800=0x7f060033;
         public static final int material_blue_grey_900=0x7f060034;
         public static final int material_blue_grey_950=0x7f060035;
@@ -1672,6 +1673,10 @@ containing a value of this type.
         public static final int dialog_fixed_width_minor=0x7f070010;
         public static final int disabled_alpha_material_dark=0x7f070004;
         public static final int disabled_alpha_material_light=0x7f070003;
+        public static final int item_book_row_height=0x7f070035;
+        /**  Item book row 
+         */
+        public static final int item_book_row_width=0x7f070034;
         /** 
          Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html
@@ -1914,69 +1919,70 @@ containing a value of this type.
         public static final int media_flash_sd_mmc=0x7f0200e7;
         public static final int meta__menu_background=0x7f0200e8;
         public static final int meta__menu_item_background=0x7f0200e9;
-        public static final int plugins_logo_litres=0x7f0200ea;
-        public static final int si_tab=0x7f0200eb;
-        public static final int si_tab_nonselected=0x7f0200ec;
-        public static final int si_tab_normal=0x7f0200ed;
-        public static final int si_tab_pressed=0x7f0200ee;
-        public static final int tabhost_bg_ing_selector=0x7f0200ef;
-        public static final int tabhost_text_selector=0x7f0200f0;
-        public static final int toast_layout_border=0x7f0200f1;
-        public static final int tx_fabric=0x7f0200f2;
-        public static final int tx_fabric_dark=0x7f0200f3;
-        public static final int tx_fabric_indigo_fibre=0x7f0200f4;
-        public static final int tx_fabric_indigo_fibre_dark=0x7f0200f5;
-        public static final int tx_gray_sand=0x7f0200f6;
-        public static final int tx_gray_sand_dark=0x7f0200f7;
-        public static final int tx_green_wall=0x7f0200f8;
-        public static final int tx_green_wall_dark=0x7f0200f9;
-        public static final int tx_metal_red_dark=0x7f0200fa;
-        public static final int tx_metal_red_light=0x7f0200fb;
-        public static final int tx_metall_copper=0x7f0200fc;
-        public static final int tx_metall_copper_dark=0x7f0200fd;
-        public static final int tx_metall_old_blue=0x7f0200fe;
-        public static final int tx_metall_old_blue_dark=0x7f0200ff;
-        public static final int tx_old_book=0x7f020100;
-        public static final int tx_old_book_dark=0x7f020101;
-        public static final int tx_old_paper=0x7f020102;
-        public static final int tx_old_paper_dark=0x7f020103;
-        public static final int tx_paper=0x7f020104;
-        public static final int tx_paper_dark=0x7f020105;
-        public static final int tx_rust=0x7f020106;
-        public static final int tx_rust_dark=0x7f020107;
-        public static final int tx_sand=0x7f020108;
-        public static final int tx_sand_dark=0x7f020109;
-        public static final int tx_stones=0x7f02010a;
-        public static final int tx_stones_dark=0x7f02010b;
-        public static final int tx_wood=0x7f02010c;
-        public static final int tx_wood_dark=0x7f02010d;
-        public static final int tx_wood_dark_v3=0x7f02010e;
-        public static final int tx_wood_v3=0x7f02010f;
-        public static final int ui_status_background_browser_black=0x7f020110;
-        public static final int ui_status_background_browser_dark=0x7f020111;
-        public static final int ui_status_background_browser_light=0x7f020112;
-        public static final int ui_status_background_browser_white=0x7f020113;
-        public static final int ui_status_background_reader_black=0x7f020114;
-        public static final int ui_status_background_reader_dark=0x7f020115;
-        public static final int ui_status_background_reader_light=0x7f020116;
-        public static final int ui_status_background_reader_white=0x7f020117;
-        public static final int ui_toolbar_background_browser_black=0x7f020118;
-        public static final int ui_toolbar_background_browser_dark=0x7f020119;
-        public static final int ui_toolbar_background_browser_light=0x7f02011a;
-        public static final int ui_toolbar_background_browser_vertical_black=0x7f02011b;
-        public static final int ui_toolbar_background_browser_vertical_dark=0x7f02011c;
-        public static final int ui_toolbar_background_browser_vertical_light=0x7f02011d;
-        public static final int ui_toolbar_background_browser_vertical_white=0x7f02011e;
-        public static final int ui_toolbar_background_browser_white=0x7f02011f;
-        public static final int ui_toolbar_background_reader_black=0x7f020120;
-        public static final int ui_toolbar_background_reader_dark=0x7f020121;
-        public static final int ui_toolbar_background_reader_light=0x7f020122;
-        public static final int ui_toolbar_background_reader_vertical_black=0x7f020123;
-        public static final int ui_toolbar_background_reader_vertical_dark=0x7f020124;
-        public static final int ui_toolbar_background_reader_vertical_light=0x7f020125;
-        public static final int ui_toolbar_background_reader_vertical_white=0x7f020126;
-        public static final int ui_toolbar_background_reader_white=0x7f020127;
-        public static final int up_edittext_gray=0x7f020128;
+        public static final int not_found_icon=0x7f0200ea;
+        public static final int plugins_logo_litres=0x7f0200eb;
+        public static final int si_tab=0x7f0200ec;
+        public static final int si_tab_nonselected=0x7f0200ed;
+        public static final int si_tab_normal=0x7f0200ee;
+        public static final int si_tab_pressed=0x7f0200ef;
+        public static final int tabhost_bg_ing_selector=0x7f0200f0;
+        public static final int tabhost_text_selector=0x7f0200f1;
+        public static final int toast_layout_border=0x7f0200f2;
+        public static final int tx_fabric=0x7f0200f3;
+        public static final int tx_fabric_dark=0x7f0200f4;
+        public static final int tx_fabric_indigo_fibre=0x7f0200f5;
+        public static final int tx_fabric_indigo_fibre_dark=0x7f0200f6;
+        public static final int tx_gray_sand=0x7f0200f7;
+        public static final int tx_gray_sand_dark=0x7f0200f8;
+        public static final int tx_green_wall=0x7f0200f9;
+        public static final int tx_green_wall_dark=0x7f0200fa;
+        public static final int tx_metal_red_dark=0x7f0200fb;
+        public static final int tx_metal_red_light=0x7f0200fc;
+        public static final int tx_metall_copper=0x7f0200fd;
+        public static final int tx_metall_copper_dark=0x7f0200fe;
+        public static final int tx_metall_old_blue=0x7f0200ff;
+        public static final int tx_metall_old_blue_dark=0x7f020100;
+        public static final int tx_old_book=0x7f020101;
+        public static final int tx_old_book_dark=0x7f020102;
+        public static final int tx_old_paper=0x7f020103;
+        public static final int tx_old_paper_dark=0x7f020104;
+        public static final int tx_paper=0x7f020105;
+        public static final int tx_paper_dark=0x7f020106;
+        public static final int tx_rust=0x7f020107;
+        public static final int tx_rust_dark=0x7f020108;
+        public static final int tx_sand=0x7f020109;
+        public static final int tx_sand_dark=0x7f02010a;
+        public static final int tx_stones=0x7f02010b;
+        public static final int tx_stones_dark=0x7f02010c;
+        public static final int tx_wood=0x7f02010d;
+        public static final int tx_wood_dark=0x7f02010e;
+        public static final int tx_wood_dark_v3=0x7f02010f;
+        public static final int tx_wood_v3=0x7f020110;
+        public static final int ui_status_background_browser_black=0x7f020111;
+        public static final int ui_status_background_browser_dark=0x7f020112;
+        public static final int ui_status_background_browser_light=0x7f020113;
+        public static final int ui_status_background_browser_white=0x7f020114;
+        public static final int ui_status_background_reader_black=0x7f020115;
+        public static final int ui_status_background_reader_dark=0x7f020116;
+        public static final int ui_status_background_reader_light=0x7f020117;
+        public static final int ui_status_background_reader_white=0x7f020118;
+        public static final int ui_toolbar_background_browser_black=0x7f020119;
+        public static final int ui_toolbar_background_browser_dark=0x7f02011a;
+        public static final int ui_toolbar_background_browser_light=0x7f02011b;
+        public static final int ui_toolbar_background_browser_vertical_black=0x7f02011c;
+        public static final int ui_toolbar_background_browser_vertical_dark=0x7f02011d;
+        public static final int ui_toolbar_background_browser_vertical_light=0x7f02011e;
+        public static final int ui_toolbar_background_browser_vertical_white=0x7f02011f;
+        public static final int ui_toolbar_background_browser_white=0x7f020120;
+        public static final int ui_toolbar_background_reader_black=0x7f020121;
+        public static final int ui_toolbar_background_reader_dark=0x7f020122;
+        public static final int ui_toolbar_background_reader_light=0x7f020123;
+        public static final int ui_toolbar_background_reader_vertical_black=0x7f020124;
+        public static final int ui_toolbar_background_reader_vertical_dark=0x7f020125;
+        public static final int ui_toolbar_background_reader_vertical_light=0x7f020126;
+        public static final int ui_toolbar_background_reader_vertical_white=0x7f020127;
+        public static final int ui_toolbar_background_reader_white=0x7f020128;
+        public static final int up_edittext_gray=0x7f020129;
     }
     public static final class id {
         public static final int LinearLayout01=0x7f0a003f;
@@ -2429,44 +2435,45 @@ containing a value of this type.
         public static final int custom_toast=0x7f030038;
         public static final int fragment_navigation_drawer=0x7f030039;
         public static final int fragment_reader=0x7f03003a;
-        public static final int item_directory_row=0x7f03003b;
-        public static final int line_edit_dlg=0x7f03003c;
-        public static final int meta__action_item_split=0x7f03003d;
-        public static final int meta__action_item_vertical=0x7f03003e;
-        public static final int meta__menu_item_background=0x7f03003f;
-        public static final int meta__popup_menu_vertical=0x7f030040;
-        public static final int meta__progress_wheel=0x7f030041;
-        public static final int network_access_progress=0x7f030042;
-        public static final int notice_dialog=0x7f030043;
-        public static final int online_store_book_info_dialog=0x7f030044;
-        public static final int online_store_login_dialog=0x7f030045;
-        public static final int online_store_new_account_dialog=0x7f030046;
-        public static final int option_item=0x7f030047;
-        public static final int option_item_boolean=0x7f030048;
-        public static final int option_item_color=0x7f030049;
-        public static final int option_item_submenu=0x7f03004a;
-        public static final int option_value=0x7f03004b;
-        public static final int option_value_image=0x7f03004c;
-        public static final int options=0x7f03004d;
-        public static final int options_browser=0x7f03004e;
-        public static final int options_tap_zone_grid=0x7f03004f;
-        public static final int popup_toolbar_item=0x7f030050;
-        public static final int profile_item=0x7f030051;
-        public static final int progress_dialog=0x7f030052;
-        public static final int reader_status_bar=0x7f030053;
-        public static final int root_item_dir=0x7f030054;
-        public static final int root_item_library=0x7f030055;
-        public static final int root_item_online_catalog=0x7f030056;
-        public static final int root_item_recent_book=0x7f030057;
-        public static final int root_window=0x7f030058;
-        public static final int search_dialog=0x7f030059;
-        public static final int search_popup=0x7f03005a;
-        public static final int selection_toolbar=0x7f03005b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03005c;
-        public static final int toc_item=0x7f03005d;
-        public static final int toc_item_current=0x7f03005e;
-        public static final int tts_toolbar=0x7f03005f;
-        public static final int view_layout_tab=0x7f030060;
+        public static final int item_book_row=0x7f03003b;
+        public static final int item_directory_row=0x7f03003c;
+        public static final int line_edit_dlg=0x7f03003d;
+        public static final int meta__action_item_split=0x7f03003e;
+        public static final int meta__action_item_vertical=0x7f03003f;
+        public static final int meta__menu_item_background=0x7f030040;
+        public static final int meta__popup_menu_vertical=0x7f030041;
+        public static final int meta__progress_wheel=0x7f030042;
+        public static final int network_access_progress=0x7f030043;
+        public static final int notice_dialog=0x7f030044;
+        public static final int online_store_book_info_dialog=0x7f030045;
+        public static final int online_store_login_dialog=0x7f030046;
+        public static final int online_store_new_account_dialog=0x7f030047;
+        public static final int option_item=0x7f030048;
+        public static final int option_item_boolean=0x7f030049;
+        public static final int option_item_color=0x7f03004a;
+        public static final int option_item_submenu=0x7f03004b;
+        public static final int option_value=0x7f03004c;
+        public static final int option_value_image=0x7f03004d;
+        public static final int options=0x7f03004e;
+        public static final int options_browser=0x7f03004f;
+        public static final int options_tap_zone_grid=0x7f030050;
+        public static final int popup_toolbar_item=0x7f030051;
+        public static final int profile_item=0x7f030052;
+        public static final int progress_dialog=0x7f030053;
+        public static final int reader_status_bar=0x7f030054;
+        public static final int root_item_dir=0x7f030055;
+        public static final int root_item_library=0x7f030056;
+        public static final int root_item_online_catalog=0x7f030057;
+        public static final int root_item_recent_book=0x7f030058;
+        public static final int root_window=0x7f030059;
+        public static final int search_dialog=0x7f03005a;
+        public static final int search_popup=0x7f03005b;
+        public static final int selection_toolbar=0x7f03005c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03005d;
+        public static final int toc_item=0x7f03005e;
+        public static final int toc_item_current=0x7f03005f;
+        public static final int tts_toolbar=0x7f030060;
+        public static final int view_layout_tab=0x7f030061;
     }
     public static final class menu {
         public static final int cr3_bookmark_context_menu=0x7f0e0000;
@@ -3167,11 +3174,6 @@ containing a value of this type.
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     
 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
@@ -3187,7 +3189,6 @@ containing a value of this type.
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f08000c;
         public static final int Base_Animation_AppCompat_DropDownUp=0x7f08010c;
@@ -3446,6 +3447,7 @@ item name="android:textColor">?textColorSecondary</item
         public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f080067;
         public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f080066;
         public static final int TextAppearance_Widget_EditText=0x7f080012;
+        public static final int TextViewItemBookRowStyle=0x7f080125;
         /**  Themes in the "Theme.AppCompat" family will contain an action bar by default.
          If Holo themes are available on the current platform version they will be used.
          A limited Holo-styled action bar will be provided on platform versions older

@@ -59,13 +59,13 @@ public final class R {
 		public static final int ic_launcher = 0x7f0200d1;
 		public static final int meta__menu_background = 0x7f0200e8;
 		public static final int meta__menu_item_background = 0x7f0200e9;
-		public static final int si_tab = 0x7f0200eb;
-		public static final int si_tab_nonselected = 0x7f0200ec;
-		public static final int si_tab_normal = 0x7f0200ed;
-		public static final int si_tab_pressed = 0x7f0200ee;
-		public static final int tabhost_bg_ing_selector = 0x7f0200ef;
-		public static final int tabhost_text_selector = 0x7f0200f0;
-		public static final int up_edittext_gray = 0x7f020128;
+		public static final int si_tab = 0x7f0200ec;
+		public static final int si_tab_nonselected = 0x7f0200ed;
+		public static final int si_tab_normal = 0x7f0200ee;
+		public static final int si_tab_pressed = 0x7f0200ef;
+		public static final int tabhost_bg_ing_selector = 0x7f0200f0;
+		public static final int tabhost_text_selector = 0x7f0200f1;
+		public static final int up_edittext_gray = 0x7f020129;
 	}
 	public static final class id {
 		public static final int action_settings = 0x7f0a0166;
@@ -101,12 +101,12 @@ public final class R {
 		public static final int base_dialog_layout = 0x7f030022;
 		public static final int base_dialog_no_title_layout = 0x7f030023;
 		public static final int base_icon_title_dialog_layout = 0x7f030024;
-		public static final int meta__action_item_split = 0x7f03003d;
-		public static final int meta__action_item_vertical = 0x7f03003e;
-		public static final int meta__menu_item_background = 0x7f03003f;
-		public static final int meta__popup_menu_vertical = 0x7f030040;
-		public static final int meta__progress_wheel = 0x7f030041;
-		public static final int view_layout_tab = 0x7f030060;
+		public static final int meta__action_item_split = 0x7f03003e;
+		public static final int meta__action_item_vertical = 0x7f03003f;
+		public static final int meta__menu_item_background = 0x7f030040;
+		public static final int meta__popup_menu_vertical = 0x7f030041;
+		public static final int meta__progress_wheel = 0x7f030042;
+		public static final int view_layout_tab = 0x7f030061;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0e000e;

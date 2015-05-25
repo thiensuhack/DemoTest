@@ -9,5 +9,10 @@
          https://developer.android.com/design/patterns/navigation-drawer.html
     -->
     <dimen name="navigation_drawer_width">240dp</dimen>
+    
+    <!-- Item book row -->
+    <dimen name="item_book_row_width">100dp</dimen>
+    <dimen name="item_book_row_height">130dp</dimen>
+    <!-- End item book row -->
 
 </resources>
